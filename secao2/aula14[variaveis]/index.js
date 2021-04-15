@@ -1,30 +1,42 @@
 /**
  * let é mais atual para criação de variáveis
- * é uma versão melhorada de var
- * existente durante seu bloco
- * não pode ser redeclarada no mesmo bloco, isso ocasiona erro
- * diferentes blocos -> diferentes variáveis
- * então é melhor usar let que var, é mais seguro
- * escopo global ou local
- * inicialização default com undefined
+ * - é uma versão melhorada de var
+ * - existente durante seu bloco
+ * - não pode ser redeclarada no mesmo bloco, isso ocasiona erro
+ *    - mas em blocos diferentes sim
+ *    - diferentes blocos -> diferentes variáveis
+ * - então é melhor usar let que var, é mais seguro
+ * - escopo global ou local
+ * - inicialização default com undefined
  */
 let nomeConsagrado = 'João';  
+let sobrenome = 'Miranda';
+const verdadeira = true;
+
+if (verdadeira) {
+  let nomeConsagrado = 'Marilia';
+  console.log(nomeConsagrado, sobrenome);
+}
+
+console.log(nomeConsagrado, sobrenome);
+
+
 /**
  * var é mais antigo
- * pode ser redeclarada
- * escopo global ou local
- * inicialização default com undefined
+ * - pode ser redeclarada
+ * - escopo global ou local (escopo de função)
+ * - inicialização default com undefined
  */
 var nomeConsagrada = 'Maria';
 var nomeConsagrada = 'Fernanda'; // redeclarada
 
 /**
  * const é uma variável constante, uma vez atribuído seu valor não muda
- * não pode ser atualizada ou redeclarada
- * existente durante seu bloco
- * MAS objetos que sejam constantes, msm não podendo ser redeclarados inteiramente,
+ * - não pode ser atualizada ou redeclarada
+ * - existente durante seu bloco
+ * - MAS objetos que sejam constantes, msm não podendo ser redeclarados inteiramente,
  *    suas propriedades podem
- * ela não pode ser declarada sem  ser inicializada, não possui inicialização
+ * - ela não pode ser declarada sem  ser inicializada, não possui inicialização
  *    default com undefined, retorna erro caso não receba um valor
  */
 const nomeFilho = 'Eduardo';
@@ -50,9 +62,9 @@ console.log(nome);
 let soma = 2+2;
 
 /**
- * Função para eu saber o tipo do dado
- * posso usar só o nomeVariavel eme retorna o tipo
- * ou posso usar nomeVariavel, nomeVariavel para me retorna o tipo e o seu valor
+ * typeof: Função para eu saber o tipo do dado
+ * - posso usar só o nomeVariavel eme retorna o tipo
+ * - ou posso usar nomeVariavel, nomeVariavel para me retorna o tipo e o seu valor
  */
 console.log(typeof(soma));
 console.log(typeof nome);
